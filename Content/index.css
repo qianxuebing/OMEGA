@@ -1,0 +1,231 @@
+html{
+	/* font-size: -webkit-calc(100vw/7.5);
+	font-size: calc(100vw/7.5); */
+	font-family: "microsoft yahei";
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul li{
+	list-style: none;
+}
+input,textarea {
+    outline: none;
+    -webkit-appearance: none; 
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body{
+	background-image: url(../image/bg.jpg);
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.logo{
+	width: 3.36rem;
+	margin: 0.9rem auto;
+}
+.logo img{
+	width: 100%;
+}
+.content{
+	text-align: center;
+	font-size: 0.4rem;
+	color: #535353;
+}
+.btn-strat{
+	position: fixed;
+	bottom: 1.12rem;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);	
+	text-align: center;
+	width: 3.36rem;
+	height: 1.18rem;	
+	background-image: url(../image/btn_start.png);
+	background-size: 100% 100%;
+	background-repeat:no-repeat;
+	color: #fff;	
+	font-weight: 700;
+	font-size: 0.3128rem;
+	line-height: 1rem;
+	cursor: pointer;
+}
+
+/*****************************  index1    ***************************************/
+
+.title{
+	width: 1.775rem;
+	margin: 0.53rem auto;
+	text-align: center;
+}
+.title img{
+	width: 100%;
+}
+hr.line{
+  margin: 0 0.5rem;
+  border:none;
+  border-bottom:1px solid #000;
+  height:1px;
+  -webkit-transform: scaleY(0.5);
+  -webkit-transform-origin:0 0;
+}
+.evaluate-wrap{
+	margin:0.76rem 0.67rem;
+	text-align: center;
+}
+.evaluate-wrap .evaluate-tilte{
+	font-size: 0.4rem;
+	color: #535353;
+	font-weight: 700;
+}
+.evaluate{
+	color: #a5a5a5;
+	font-size: 0.24rem;
+}
+.star{
+	width: 4.665rem;
+	margin: 0.335rem auto;
+	font-size: 0;
+}
+.star span{
+	display: inline-block;
+	margin-right: 0.35rem;
+	width: 0.58rem;
+	height: 0.58rem;
+}
+.star span:nth-child(5){
+	margin-right: 0;
+}
+span.un_check{
+	background-image: url(../image/xing_05.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+span.checked{
+	background-image: url(../image/xing_03.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+/* .aspect{
+	margin-bottom: 0.4rem;
+} */
+.aspect-title{
+	text-align: center;
+	margin-bottom: 0.4rem;
+	font-size: 0.4rem;
+	color: #535353;
+	font-weight: 700;
+}
+.items {
+	width: 5.445rem;
+	margin: 0 auto;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.items li{
+	width: 2.57rem;
+	border: 1px solid #b5b3b4;
+	background-color: rgba(255,255,255,0);
+	color: #535353;
+	text-align: center;
+	margin-bottom: 0.33rem;
+	text-align: center;
+	box-sizing: border-box;
+	font-size: 0.24rem;
+	text-overflow: ellipsis;  
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.items li.active{
+	color: #c50d2f;
+	border-color: #c50d2f;
+}
+.other-opinion{
+	width: 5.445rem;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+.other-opinion textarea{
+	width: 100%;
+	border-radius: 5px;
+	outline: none;
+	border-color: #e1e1e1;
+	padding: 0.35rem 0.35rem 0;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,0);
+	font-size: 0.24rem;
+	box-shadow: 0 0 3px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+.btn-wrap{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+.btn-wrap .bg{
+	height: 1rem;
+	background-image: -webkit-linear-gradient(top,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background-image: -moz-linear-gradient(top,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background-image: -o-linear-gradient(top,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background-image: linear-gradient(top,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+}
+.btn-wrapper{
+	background-color: #fff;
+	padding-bottom: 0.5rem;
+}
+ .btn-confirm{
+	display: block;
+	padding: 0.2rem 1rem;
+	background-color: #c40d2e;
+	border: none;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+	outline: none;
+	font-size: 0.3rem;
+	color:#fff;
+	margin: 0 auto;
+}
+
+/********************************  index2    ***************************************/
+.end-title{
+	margin: 1.77rem auto 0.5rem;
+	width: 2.32rem;
+	text-align: center;	
+}
+.end-title img{
+	width: 100%;
+}
+
+.end-description{
+	text-align: center;
+	color: #434343;
+	font-size: 0.3rem;
+}
+.liner{
+	height: 1px;
+	margin: 0.4rem auto;
+	width: 3.43rem;
+	background-image: url(../image/line_03.jpg);
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+}
+.end-description p{
+	line-height: 0.56rem;
+}
+
+.qr{
+	width: 4.34rem;
+	text-align: center;
+	margin: 0.83rem auto 0;
+}
+.qr img{
+	width: 100%;
+}
