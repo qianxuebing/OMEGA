@@ -26,12 +26,12 @@ var verySatisfied = {
 
 $(function() {
 	var items=`<p class="aspect-title"></p>
-						<div class="aspect-wrap">
-							<ul class="items"></ul>			
-							<div class="other-opinion">
-								<textarea rows="3" cols="" placeholder="其他意见..."></textarea>
-							</div>
-						</div>`
+				<div class="aspect-wrap">
+					<ul class="items"></ul>			
+					<div class="other-opinion">
+						<textarea rows="3" cols="" placeholder="其他意见..."></textarea>
+					</div>
+				</div>`
 	setTimeout(()=>{
 		showLoading(false);
 	},500);
