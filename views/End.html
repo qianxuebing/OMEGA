@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum=1.0,user-scalable=no">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../Content/index.css"/>
-		<script src="../Script/Rem.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../Content/Common.css"/>
 		<style type="text/css">
 			body{
 				background-image: url(../Image/bg_02.jpg);
@@ -26,5 +26,18 @@
 		<div class="qr">
 			<img src="../Image/QR_03.jpg">
 		</div>
+		
+		<script src="../Script/Rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Script/jquery-3.2.1.min.js"></script>		
+		<script src="../Script/Common.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				setTimeout(()=>{
+					showLoading(false);
+				},500);
+									
+			})	
+		</script>
 	</body>
 </html>

@@ -1,0 +1,91 @@
+@font-face {
+				font-family: 'iconfont';
+				/* project id 818577 */
+				src: url('//at.alicdn.com/t/font_818577_evs4lhqvla.eot');
+				src: url('//at.alicdn.com/t/font_818577_evs4lhqvla.eot?#iefix') format('embedded-opentype'), 				url('//at.alicdn.com/t/font_818577_evs4lhqvla.woff') format('woff'), 				url('//at.alicdn.com/t/font_818577_evs4lhqvla.svg#iconfont') format('svg');
+				url('//at.alicdn.com/t/font_818577_evs4lhqvla.ttf') format('truetype'),
+			}
+			
+			.iconfont {
+				font-family: "iconfont" !important;
+				font-size: 30px;
+				font-style: normal;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+			
+			.icon-loadingspinner:before {
+				content: "\e770";
+				/*color: red;*/
+			}
+			
+			.mask{
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(0,0,0,0.2);
+				z-index: 9999;
+			}
+			
+			.content-wrapper{
+				width: 50%;
+				background-color: #fff;
+				position: absolute;
+				top: 40%;
+				left: 50%;
+				transform: translate(-50%);
+				border-radius: 10px;
+				text-align: center;
+				padding: 40px 0;
+				box-sizing: border-box;
+				font-size: 14px;
+			}
+			.content-wrapper p{
+				margin-top: 10px;
+			}			
+			.content-wrapper span {
+				display: inline-block;
+				-webkit-transition-property: -webkit-transform;
+				transition-property: -webkit-transform;
+				transition-duration: 1s;
+				-webkit-transition-duration: 1s;
+				-webkit-animation: rotate 1s linear infinite;
+				animation: rotate 1s linear infinite;
+			}
+			
+			.warnning-alert{
+				display: none;
+			}
+			
+			.btn button{
+				padding: 6px 25px;
+			    font-size: 16px;
+			    background-color: red;
+			    outline: none;
+			    border: none;
+			    color: #fff;
+			}
+			
+			
+			
+			
+		@-webkit-keyframes rotate {
+			from {
+				-webkit-transform: rotate(0deg);
+			}
+			
+			to {
+				-webkit-transform: rotate(359deg);
+			}
+		}
+		@keyframes rotate {
+			from {
+				transform: rotate(0deg);
+			}
+			
+			to {
+				transform: rotate(359deg);
+			}
+		}

@@ -4,7 +4,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="../Content/index.css"/>		
+		<link rel="stylesheet" type="text/css" href="../Content/index.css"/>	
+		<link rel="stylesheet" type="text/css" href="../Content/Common.css"/>
 	</head>
 	<body>
 		<div class="logo">
@@ -18,9 +19,14 @@
 		</div>
 		
 		<script src="../Script/Rem.js " type="text/javascript" charset="utf-8"></script>
-		<script src="../Script/jquery-3.2.1.min.js"></script>	
+		<script src="../Script/jquery-3.2.1.min.js"></script>
+		<script src="../Script/Common.js"></script>
 		<script type="text/javascript">
 			$(function(){
+				
+				setTimeout(()=>{
+					showLoading(false);
+				},500);
 				
 				$("#btn-start").on("touchstart",function(e){
 					e.preventDefault();
