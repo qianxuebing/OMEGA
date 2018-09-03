@@ -66,9 +66,9 @@ $(function() {
 					};					
 					break;
 				case 2:
-					$(".evaluate-wrap .evaluate").text("*不满意");					
-					$(".aspect .items").html("");
+					$(".evaluate-wrap .evaluate").text("*不满意");
 					$(".aspect .aspect-title").text(disagree.title);
+					$(".aspect .items").html("");					
 					$.each(disagree.list,function(index,value){
 						$(".aspect .items").append(`<li>${value}</li>`);
 						addEvent(index);
