@@ -66,36 +66,36 @@ $(function() {
 					};					
 					break;
 				case 2:
-					$(".evaluate-wrap .evaluate").text("*不满意");
-					$(".aspect .aspect-title").text(disagree.title);
+					$(".evaluate-wrap .evaluate").text("*不满意");					
 					$(".aspect .items").html("");
+					$(".aspect .aspect-title").text(disagree.title);
 					$.each(disagree.list,function(index,value){
 						$(".aspect .items").append(`<li>${value}</li>`);
 						addEvent(index);
 					});
 					break;
 				case 3:
-					$(".evaluate-wrap .evaluate").text("*一般");
+					$(".evaluate-wrap .evaluate").text("*一般");		
 					$(".aspect .aspect-title").text(common.title);
-					$(".aspect .items").html("");
+					$(".aspect .items").html("");					
 					$.each(common.list,function(index,value){
 						$(".aspect .items").append(`<li>${value}</li>`);
 						addEvent(index);
 					});
 					break;
 				case 4:
-					$(".evaluate-wrap .evaluate").text("*满意");
+					$(".evaluate-wrap .evaluate").text("*满意");	
 					$(".aspect .aspect-title").text(satisfied.title);
-					$(".aspect .items").html("");
+					$(".aspect .items").html("");										
 					$.each(satisfied.list,function(index,value){
 						$(".aspect .items").append(`<li>${value}</li>`);
 						addEvent(index);
 					});
 					break;
 				case 5:
-					$(".evaluate-wrap .evaluate").text("*非常满意");
+					$(".evaluate-wrap .evaluate").text("*非常满意");	
 					$(".aspect .aspect-title").text(verySatisfied.title);
-					$(".aspect .items").html("");
+					$(".aspect .items").html("");					
 					$.each(verySatisfied.list,function(index,value){
 						$(".aspect .items").append(`<li>${value}</li>`);
 						addEvent(index);
