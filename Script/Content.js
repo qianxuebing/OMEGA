@@ -32,6 +32,7 @@ $(function() {
 						<textarea rows="3" cols="" placeholder="其他意见..."></textarea>
 					</div>
 				</div>`
+				
 	setTimeout(()=>{
 		showLoading(false);
 	},500);
@@ -43,63 +44,27 @@ $(function() {
 			$(this).addClass("checked").removeClass("un_check").prevAll("span").addClass("checked").removeClass("un_check");
 			$(this).nextAll("span").removeClass("checked").addClass("un_check");
 			
-			var starLength=$(".star span.checked").length;
-			
+			var starLength=$(".star span.checked").length;			
 			switch (starLength){
 				case 1:
 					$(".evaluate-wrap .evaluate").text("*非常不满意");
-					if ($(".aspect").html() == "") {
-						$(".aspect").append(items);
-						$(".aspect .aspect-title").text(veryDisagree.title);
-						$.each(veryDisagree.list,function(index,value){
-							$(".aspect .items").append(`<li>${value}</li>`);
-							addEvent(index);	
-						});
-					} else{
-						$(".aspect").html("");
-						$(".aspect").append(items);
-						$(".aspect .aspect-title").text(veryDisagree.title);
-						$.each(veryDisagree.list,function(index,value){
-							$(".aspect .items").append(`<li>${value}</li>`);
-							addEvent(index);
-						});
-					};					
+					checkStar(items,veryDisagree);			
 					break;
 				case 2:
 					$(".evaluate-wrap .evaluate").text("*不满意");
-					$(".aspect .aspect-title").text(disagree.title);
-					$(".aspect .items").html("");					
-					$.each(disagree.list,function(index,value){
-						$(".aspect .items").append(`<li>${value}</li>`);
-						addEvent(index);
-					});
+					checkStar(items,disagree);	
 					break;
 				case 3:
-					$(".evaluate-wrap .evaluate").text("*一般");		
-					$(".aspect .aspect-title").text(common.title);
-					$(".aspect .items").html("");					
-					$.each(common.list,function(index,value){
-						$(".aspect .items").append(`<li>${value}</li>`);
-						addEvent(index);
-					});
+					$(".evaluate-wrap .evaluate").text("*一般");	
+					checkStar(items,common);					
 					break;
 				case 4:
 					$(".evaluate-wrap .evaluate").text("*满意");	
-					$(".aspect .aspect-title").text(satisfied.title);
-					$(".aspect .items").html("");										
-					$.each(satisfied.list,function(index,value){
-						$(".aspect .items").append(`<li>${value}</li>`);
-						addEvent(index);
-					});
+					checkStar(items,satisfied);
 					break;
 				case 5:
-					$(".evaluate-wrap .evaluate").text("*非常满意");	
-					$(".aspect .aspect-title").text(verySatisfied.title);
-					$(".aspect .items").html("");					
-					$.each(verySatisfied.list,function(index,value){
-						$(".aspect .items").append(`<li>${value}</li>`);
-						addEvent(index);
-					});
+					$(".evaluate-wrap .evaluate").text("*非常满意");
+						checkStar(items,verySatisfied);
 					break;
 				default:
 					break;
@@ -138,5 +103,25 @@ function addEvent(index){
 			$(this).addClass("active");
 		}
 	})
+}
+
+// 添加多选项 
+function checkStar(item,name){
+	if ($(".aspect").html() == "") {
+		$(".aspect").append(item);
+		$(".aspect .aspect-title").text(name.title);
+		$.each(name.list,function(index,value){
+			$(".aspect .items").append(`<li>${value}</li>`);
+			addEvent(index);	
+		});
+	} else{
+		$(".aspect").html("");
+		$(".aspect").append(item);
+		$(".aspect .aspect-title").text(name.title);
+		$.each(name.list,function(index,value){
+			$(".aspect .items").append(`<li>${value}</li>`);
+			addEvent(index);
+		});
+	};	
 }
 
