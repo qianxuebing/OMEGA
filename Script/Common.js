@@ -33,6 +33,12 @@ function showLoading(open){
 
 
 function check(meg){
-	$(".warnning-alert p").text(msg);
+	$(".warnning-alert").show();
+	$(".warnning-alert p").text(meg);
 }
+
+
+$(".button-confirm").on("click",function(){
+	$(".warnning-alert").hide();
+})
 

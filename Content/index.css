@@ -141,6 +141,7 @@ span.checked{
 	text-overflow: ellipsis;  
 	white-space: nowrap;
 	overflow: hidden;
+	cursor: pointer;
 }
 
 .items li.active{

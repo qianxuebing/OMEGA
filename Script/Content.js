@@ -48,24 +48,58 @@ $(function() {
 			switch (starLength){
 				case 1:
 					$(".evaluate-wrap .evaluate").text("*非常不满意");
-					$(".aspect").append(items);
-					$(".aspect .aspect-title").text(veryDisagree.title);
-					$.each(veryDisagree.list,function(index,value){
-						$(".aspect .items").append(`<li>${value}</li>`)
-					});
-					
+					if ($(".aspect").html() == "") {
+						$(".aspect").append(items);
+						$(".aspect .aspect-title").text(veryDisagree.title);
+						$.each(veryDisagree.list,function(index,value){
+							$(".aspect .items").append(`<li>${value}</li>`);
+							addEvent(index);	
+						});
+					} else{
+						$(".aspect").html("");
+						$(".aspect").append(items);
+						$(".aspect .aspect-title").text(veryDisagree.title);
+						$.each(veryDisagree.list,function(index,value){
+							$(".aspect .items").append(`<li>${value}</li>`);
+							addEvent(index);
+						});
+					};					
 					break;
 				case 2:
 					$(".evaluate-wrap .evaluate").text("*不满意");
+					$(".aspect .aspect-title").text(disagree.title);
+					$(".aspect .items").html("");
+					$.each(disagree.list,function(index,value){
+						$(".aspect .items").append(`<li>${value}</li>`);
+						addEvent(index);
+					});
 					break;
 				case 3:
 					$(".evaluate-wrap .evaluate").text("*一般");
+					$(".aspect .aspect-title").text(common.title);
+					$(".aspect .items").html("");
+					$.each(common.list,function(index,value){
+						$(".aspect .items").append(`<li>${value}</li>`);
+						addEvent(index);
+					});
 					break;
 				case 4:
 					$(".evaluate-wrap .evaluate").text("*满意");
+					$(".aspect .aspect-title").text(satisfied.title);
+					$(".aspect .items").html("");
+					$.each(satisfied.list,function(index,value){
+						$(".aspect .items").append(`<li>${value}</li>`);
+						addEvent(index);
+					});
 					break;
 				case 5:
 					$(".evaluate-wrap .evaluate").text("*非常满意");
+					$(".aspect .aspect-title").text(verySatisfied.title);
+					$(".aspect .items").html("");
+					$.each(verySatisfied.list,function(index,value){
+						$(".aspect .items").append(`<li>${value}</li>`);
+						addEvent(index);
+					});
 					break;
 				default:
 					break;
@@ -76,23 +110,33 @@ $(function() {
 	});
 	
 
-	//多选 
-	$.each($(".items li"), function(index,value) {
-		$(".items li").eq(index).on("touchstart", function(e) {
-			e.preventDefault();
-			if($(this).hasClass("active")) {
-				$(this).removeClass("active");
-			} else {
-				$(this).addClass("active");
-			}
-		})		
-	});
-
-
 	//确认
 	$(".btn-confirm").on("touchstart", function(e) {
-		e.preventDefault();
-		window.location.href = 'End.html';
+		e.preventDefault();		
+		if ($(".star span.checked").length<1) {
+			check("请选择满意度");
+		} else{
+			if ($(".items li.active").length<1) {
+				check("请选择某个方面");
+			} else{				
+				window.location.href = 'End.html';
+			}
+		}				
 	})
+	
 
 })
+
+
+// 多选
+function addEvent(index){
+	$(".items li").eq(index).on("touchstart", function(e) {
+		e.preventDefault();
+		if($(this).hasClass("active")) {
+			$(this).removeClass("active");
+		} else {
+			$(this).addClass("active");
+		}
+	})
+}
+
